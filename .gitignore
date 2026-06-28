@@ -12,6 +12,8 @@ __v0_jsx-dev-runtime.ts
 # Common ignores
 node_modules
 .next/
+.output/
+dist/
 .DS_Store
 CLAUDE.md
 howto.md

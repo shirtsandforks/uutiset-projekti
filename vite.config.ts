@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import { nitro } from 'nitro/vite'
 import { resolve } from 'node:path'
 
 export default defineConfig({
@@ -15,7 +16,8 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-    tanstackStart({ server: { preset: 'vercel' } }),
+    tanstackStart(),
+    nitro(),
     // react's vite plugin must come after start's vite plugin
     viteReact(),
   ],
